@@ -19,6 +19,8 @@ class ViewTests(unittest.TestCase):
     def test_translations_webhook(self):
         from .views import translations_webhook
         request = testing.DummyRequest()
+        request.headers.environ = {'FOO': 'foo',
+                                   'BAR': 'bar'}
         info = translations_webhook(request)
         self.assertEqual(len(mailer.outbox) == 1)
         self.assertEqual(mailer.outbox[0].subject == "hello world")

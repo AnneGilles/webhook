@@ -15,7 +15,6 @@
   <div id="wrap">
     <div id="top">
       <div class="top align-center">
-          <div><img src="${request.static_url('webhook:static/pyramid.png')}" width="750" height="169" alt="pyramid"/></div>
       </div>
     </div>
     <div id="middle">
@@ -28,7 +27,7 @@
     <div id="bottom">
       <div class="bottom">
         <div id="left" class="align-right">
-          <h2>$message</h2>
+          <h2>${request.session.peek_flash()}</h2>
           <form method="get" action="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/search.html">
                 <input type="text" id="q" name="q" value="" />
                 <input type="submit" id="x" value="Go" />

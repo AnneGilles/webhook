@@ -11,6 +11,7 @@ requires = [
     'pyramid_debugtoolbar',
     'waitress',
     'pyramid_mailer',
+    'pyramid_beaker',
     ]
 
 setup(name='webhook',
